@@ -49,7 +49,7 @@ class MobileBankApiTestV1 {
                 .when()
                 .get("/demo/accounts")
                 .then()
-                .body("[1].currency",equalTo("USD"));
+                .body("[1].currency", equalTo("USD"));
     }
 
     @Test
@@ -59,8 +59,9 @@ class MobileBankApiTestV1 {
                 .when()
                 .get("/demo/accounts")
                 .then()
-                .body("every {it.balance >= 0}",is(true));
+                .body("every {it.balance >= 0}", is(true));
     }
+
     @Test
     void shouldReturnInfoForDemoAccounts5() {
         given()
